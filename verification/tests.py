@@ -11,7 +11,7 @@ from inspect import signature
 
 params = signature(Car.__init__).parameters
 if not (len(params) ==  3 and 'self' in params and 'brand' in params and 'model' in params):
-    raise NotImplementedError("Check '__init__' arguments")
+    raise TypeError("Check '__init__' arguments")
 
 if not "some_car1" in USER_GLOBAL:
     raise NotImplementedError("Where is 'some_car1'?")
@@ -19,19 +19,19 @@ if not "some_car1" in USER_GLOBAL:
 some_car1 = USER_GLOBAL['some_car1']
 
 if not isinstance(some_car1, Car):
-    raise Warning("'some_car1' should be an instance of 'Car' class")
+    raise TypeError("'some_car1' should be an instance of 'Car' class")
 
 if not hasattr(some_car1, "brand"):
     raise NotImplementedError("Where is 'brand' attribute of 'some_car1' object?")
     
 if not isinstance(some_car1.brand, str):
-    raise NotImplementedError("'brand' attribute should be of type 'str'")
+    raise TypeError("'brand' attribute should be of type 'str'")
 
 if not hasattr(some_car1, "model"):
     raise NotImplementedError("Where is 'model' attribute of 'some_car1' object?")
 
 if not isinstance(some_car1.model, str):
-    raise NotImplementedError("'model' attribute should be of type 'str'")
+    raise TypeError("'model' attribute should be of type 'str'")
 
 if not "some_car2" in USER_GLOBAL:
     raise NotImplementedError("Where is 'some_car2'?")
@@ -39,19 +39,19 @@ if not "some_car2" in USER_GLOBAL:
 some_car2 = USER_GLOBAL['some_car2']
 
 if not isinstance(some_car2, Car):
-    raise Warning("'some_car2' should be an instance of 'Car' class")
+    raise TypeError("'some_car2' should be an instance of 'Car' class")
 
 if not hasattr(some_car2, "brand"):
     raise NotImplementedError("Where is 'brand' attribute of 'some_car2' object?")
     
 if not isinstance(some_car2.brand, str):
-    raise NotImplementedError("'brand' attribute should be of type 'str'")
+    raise TypeError("'brand' attribute should be of type 'str'")
 
 if not hasattr(some_car2, "model"):
     raise NotImplementedError("Where is 'model' attribute of 'some_car2' object?")
 
 if not isinstance(some_car2.model, str):
-    raise NotImplementedError("'model' attribute should be of type 'str'")
+    raise TypeError("'model' attribute should be of type 'str'")
 
 """
 
