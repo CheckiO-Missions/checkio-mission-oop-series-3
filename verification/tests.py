@@ -10,7 +10,7 @@ if not '__init__' in vars(Car):
 from inspect import signature
 
 params = signature(Car.__init__).parameters
-if not (len(params) ==  3 and 'self' in params and 'brand' in params and 'model' im params):
+if not (len(params) ==  3 and 'self' in params and 'brand' in params and 'model' in params):
     raise NotImplementedError("Check '__init__' arguments")
 
 if not "some_car1" in USER_GLOBAL:
