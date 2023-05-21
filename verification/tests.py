@@ -11,8 +11,19 @@ from inspect import signature
 
 params = signature(Car.__init__).parameters
 if not all((len(params) ==  3, 'self' in params, 'brand' in params, 'model' in params)):
-    raise NotImplementedError("Check '__init__' arguments")
+    raise NotImplementedError("Check the number and names of '__init__' arguments")
 
+if not "my_car" in USER_GLOBAL:
+    raise NotImplementedError("Where is 'my_car'?")
+
+my_car = USER_GLOBAL['my_car']
+
+if not isinstance(my_car, Car):
+    raise TypeError("my_car should be an instance of Car class")
+
+if my_car.brand != "" or my_car.model != "":
+    raise Warning("my_car must have default values as 'brand' and 'model'")
+    
 if not "some_car1" in USER_GLOBAL:
     raise NotImplementedError("Where is 'some_car1'?")
 
