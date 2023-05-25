@@ -111,5 +111,5 @@ TESTS = {
         "Basics": [
         prepare_test(middle_code='''''',
                      test="",
-                     answer=""),
+                     answer=""),]
 }
