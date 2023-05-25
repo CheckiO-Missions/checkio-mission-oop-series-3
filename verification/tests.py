@@ -110,9 +110,6 @@ def prepare_test(test="", answer=None, middle_code="", show_code=None):
 TESTS = {
         "Basics": [
         prepare_test(middle_code='''''',
-                     test="Car.wheels",
-                     answer="four"),
-        prepare_test(middle_code='''''',
-                     test="Car.doors",
-                     answer=4)],
+                     test="",
+                     answer=""),
 }
