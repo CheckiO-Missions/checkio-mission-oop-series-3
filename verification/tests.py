@@ -52,8 +52,8 @@ if not hasattr(some_car1, "brand"):
 if not isinstance(some_car1.brand, str):
     raise TypeError("'brand' attribute of 'some_car1' should be of type 'str'")
 
-if not some_car1.brand:
-    raise ValueError("Set distinct (!='') value of 'some_car1' 'brand'")
+if some_car1.brand != "Ford":
+    raise ValueError("Value of 'some_car1' 'brand' must be 'Ford'")
 
 if not hasattr(some_car1, "model"):
     raise NotImplementedError("Where is 'model' attribute of 'some_car1'?")
@@ -61,8 +61,8 @@ if not hasattr(some_car1, "model"):
 if not isinstance(some_car1.model, str):
     raise TypeError("'model' attribute of 'some_car1' should be of type 'str'")
 
-if not some_car1.model:
-    raise ValueError("Set distinct (!='') value of 'some_car1' 'model'")
+if some_car1.model != "Mustang":
+    raise ValueError("Value of 'some_car1' 'model' must be 'Mustang'")
 
 if not "some_car2" in USER_GLOBAL:
     raise NotImplementedError("Where is 'some_car2'?")
@@ -78,8 +78,8 @@ if not hasattr(some_car2, "brand"):
 if not isinstance(some_car2.brand, str):
     raise TypeError("'brand' attribute of 'some_car2' should be of type 'str'")
 
-if not some_car2.brand:
-    raise ValueError("Set distinct (!='') value of 'some_car2' 'brand'")
+if some_car2.brand != "":
+    raise ValueError("Value of 'some_car2' 'brand' must remains default")
 
 if not hasattr(some_car2, "model"):
     raise NotImplementedError("Where is 'model' attribute of 'some_car2'?")
@@ -87,8 +87,8 @@ if not hasattr(some_car2, "model"):
 if not isinstance(some_car2.model, str):
     raise TypeError("'model' attribute of 'some_car2' should be of type 'str'")
 
-if not some_car2.model:
-    raise ValueError("Set distinct (!='') value of 'some_car2' 'model'")
+if some_car2.model != "Camaro":
+    raise ValueError("Value of 'some_car2' 'model' must be 'Camaro'")
 """
 
 run_test = """
